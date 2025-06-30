@@ -4,15 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
+    <link rel="stylesheet" href="login.css" />
+    <script src="login.js"></script>
   </head>
   <body>
-    <h1>Login</h1>
-    <form action="login.html">
-      <label for="username">Username</label>
-      <input type="text" id="username" name="username" />
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password" />
-      <button type="submit">Login</button>
-    </form>
+    <div class="login-box">
+      <div class="login-header">
+        <header>Login</header>
+      </div>
+      <div class="input-box">
+        <input
+          type="text"
+          class="input-field"
+          placeholder="Username or email"
+          autocomplete="off"
+          required
+        />
+      </div>
+      <div class="input-box">
+        <input
+          type="password"
+          class="input-field"
+          placeholder="Password"
+          autocomplete="off"
+          required
+        />
+      </div>
+      <div class="forgot">
+        <section>
+          <input type="checkbox" id="check" />
+          <label for="check">Remember me</label>
+        </section>
+        <section>
+          <a href="#">Forgot password?</a>
+        </section>
+      </div>
+      <div class="input-submit">
+        <button class="submit-btn" id="submit"></button>
+        <label for="submit">Sign in</label>
+      </div>
+      <div class="sign-up-link">
+        <p>Don't have an account? <a href="#">Sign up</a></p>
+      </div>
+    </div>
   </body>
 </html>
