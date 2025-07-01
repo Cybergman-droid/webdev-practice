@@ -16,6 +16,11 @@ body {
   left: 0;
   right: 0;
   z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navigation-header.hide {
+  transform: translateY(-100%);
 }
 
 .nav-link {

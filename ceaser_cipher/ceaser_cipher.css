@@ -8,6 +8,7 @@ body {
 }
 
 /* Navigation Header Styles */
+/* Navigation Header Styles */
 .navigation-header {
   background-color: #ffffff;
   padding: 15px 20px;
@@ -32,12 +33,15 @@ body {
   cursor: pointer;
   transition: 0.3s;
   font-size: 16px;
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
 }
 
 .nav-button:hover {
   transform: scale(1.1);
   opacity: 0.9;
 }
+
 
 .ceaser-cipher-box {
     display: flex;

@@ -18,35 +18,37 @@ body {
 
 /* Navigation Header Styles */
 .navigation-header {
-  background-color: #ffffff;
-  padding: 15px 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-}
-
-.nav-link {
-  text-decoration: none;
-}
-
-.nav-button {
-  background-color: #1231dcf6;
-  color: #d8b60c;
-  padding: 10px 20px;
-  border: 3px solid #d8b60c;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: 0.3s;
-  font-size: 16px;
-}
-
-.nav-button:hover {
-  transform: scale(1.1);
-  opacity: 0.9;
-}
+    background-color: #ffffff;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+  }
+  
+  .nav-button {
+    background-color: #1231dcf6;
+    color: #d8b60c;
+    padding: 10px 20px;
+    border: 3px solid #d8b60c;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+    display: inline-block;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .nav-button:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
 
 .login-box {
     display: flex;
