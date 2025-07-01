@@ -4,8 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ceaser Cipher</title>
-    <link rel="stylesheet" href="/website/ceaser_cipher/ceaser_cipher.css" />
-    <script src="/website/ceaser_cipher/ceaser_cipher.js"></script>
+    <link rel="stylesheet" href="/ceaser_cipher/ceaser_cipher.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="ceaser-cipher-box">
+      <div class="ceaser-cipher-header">
+        <header>Ceaser Cipher</header>
+        <p class="description">A simple encryption tool that shifts letters in the alphabet to encode messages. Enter your text and a key number to encrypt or decrypt messages using the Caesar Cipher method.</p>
+      </div>
+      <div class="ceaser-cipher-textarea">
+        <textarea placeholder="Input"></textarea>
+        <textarea placeholder="Output"></textarea>
+      </div>
+      <div class="key-input">
+        <input id="key-input" type="text" placeholder="Key" />
+      </div>
+      <div class="ceaser-cipher-buttons">
+        <button id="encrypt">Encrypt</button>
+        <button id="decrypt">Decrypt</button>
+      </div>
+    </div>
+    <script src="/ceaser_cipher/ceaser_cipher.js"></script>
+  </body>
 </html>

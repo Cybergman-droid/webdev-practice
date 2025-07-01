@@ -1,0 +1,111 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #dfdfdd;
+}
+
+.ceaser-cipher-box {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    height: 1000px;
+    justify-self: center;
+    align-items: center;
+}
+
+.ceaser-cipher-header {
+    text-align: center;
+    margin: 30px 0 40px;
+}
+
+.ceaser-cipher-header p.description {
+    font-size: 16px;
+    color: #000000;
+    margin-top: 10px;
+    max-width: 600px;
+    line-height: 1.6;
+    font-family: "Poppins", sans-serif;
+}
+
+.ceaser-cipher-header header {
+    color: #333;
+    font-size: 32px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+}
+
+.ceaser-cipher-textarea {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 25px;
+    gap: 20px; /* Added gap between text areas */
+}
+
+.ceaser-cipher-textarea textarea {
+    width: 450px;
+    height: 400px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.5);
+    transition:  0.5s;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+textarea:focus {
+    transform: scale(1.05);
+}
+
+input#key-input {
+    display: flex;
+    width: 250px;
+    height: 40px;
+    font-size: 16px;
+    padding: 0 25px;
+    margin-bottom: 15px;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.5);
+    transition:  0.5s;
+}
+
+input#key-input:focus {
+    transform: scale(1.07);
+}
+
+
+.ceaser-cipher-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+button {
+    background-color: #1231dcf6;
+    color: #d8b60c;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 3px solid #d8b60c;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: 0.5s;
+    width: 150px;
+    height: 40px;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    opacity: 0.9;
+
+}
