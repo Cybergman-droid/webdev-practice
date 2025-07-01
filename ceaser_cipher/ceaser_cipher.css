@@ -105,6 +105,13 @@ body {
     padding: 15px;
     resize: vertical;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.ceaser-cipher-textarea textarea:focus {
+    transform: scale(1.05);
+    border: 3px solid #d8b60c;
+    
 }
 
 /* Key input */
@@ -123,11 +130,17 @@ body {
     font-size: 1rem;
     transition: 0.3s;
     box-sizing: border-box;
+    border-radius: 50px;
+    font-family: "Poppins", sans-serif;
 }
 
 .key-input input:focus {
     outline: none;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    border: 3px solid #d8b60c;
+    border-radius: 50px;
+    font-family: "Poppins", sans-serif;
 }
 
 /* Buttons */
