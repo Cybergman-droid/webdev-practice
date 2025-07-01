@@ -1,6 +1,9 @@
+/* Base Styles */
 body {
   font-family: Arial, sans-serif;
   background-color: #f2f2f2;
+  padding-top: 70px; /* Space for navigation header */
+  margin: 0;
 }
 
 /* Navigation Header Styles */
@@ -35,19 +38,16 @@ body {
   opacity: 0.9;
 }
 
-/* Add margin-top to body content to prevent overlap with fixed header */
-body {
-  padding-top: 70px;
+/* Main Content Area */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-h1 {
-  text-align: center;
-}
+/* Add your page-specific styles below this line */
 
-p {
-  text-align: center;
-}
-
+/* Example button styles */
 button {
   background-color: #1231dcf6;
   color: #d8b60c;
@@ -56,12 +56,28 @@ button {
   border: 3px solid #d8b60c;
   cursor: pointer;
   border-radius: 50px;
+  transition: 0.5s;
 }
 
 button:hover {
   opacity: 0.6;
 }
 
-a {
-  text-decoration: none;
+/* Example input styles */
+input {
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Example textarea styles */
+textarea {
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  resize: vertical;
 }
