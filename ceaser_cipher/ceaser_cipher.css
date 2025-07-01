@@ -1,17 +1,18 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: #dfdfdd;
     padding-top: 70px;
+    margin: 0;
 }
 
 /* Navigation Header Styles */
-/* Navigation Header Styles */
 .navigation-header {
   background-color: #ffffff;
-  padding: 15px 20px;
+  padding: 12px 16px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   position: fixed;
   top: 0;
@@ -27,12 +28,12 @@ body {
 .nav-button {
   background-color: #1231dcf6;
   color: #d8b60c;
-  padding: 10px 20px;
+  padding: 8px 16px;
   border: 3px solid #d8b60c;
   border-radius: 50px;
   cursor: pointer;
   transition: 0.3s;
-  font-size: 16px;
+  font-size: 14px;
   display: inline-block;
   font-family: "Poppins", sans-serif;
 }
@@ -42,107 +43,331 @@ body {
   opacity: 0.9;
 }
 
-
+/* Main content box */
 .ceaser-cipher-box {
     display: flex;
     flex-direction: column;
-    width: 1000px;
-    height: 1000px;
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
     justify-self: center;
     align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
+/* Header section */
 .ceaser-cipher-header {
     text-align: center;
     margin: 30px 0 40px;
-}
-
-.ceaser-cipher-header p.description {
-    font-size: 16px;
-    color: #000000;
-    margin-top: 10px;
+    width: 100%;
     max-width: 600px;
-    line-height: 1.6;
-    font-family: "Poppins", sans-serif;
+    padding: 0 15px;
 }
 
 .ceaser-cipher-header header {
     color: #333;
-    font-size: 32px;
+    font-size: 2.5rem;
     font-weight: 600;
     font-family: "Poppins", sans-serif;
+    margin-bottom: 1rem;
+    line-height: 1.2;
 }
 
+.ceaser-cipher-header p.description {
+    font-size: 1rem;
+    color: #000000;
+    margin-top: 1rem;
+    line-height: 1.6;
+    font-family: "Poppins", sans-serif;
+    padding: 0 10px;
+}
+
+/* Text areas */
 .ceaser-cipher-textarea {
     display: flex;
     flex-direction: row;
-    padding-bottom: 25px;
-    gap: 20px; /* Added gap between text areas */
+    width: 100%;
+    gap: 20px;
+    margin-bottom: 25px;
+    padding: 0 10px;
 }
 
 .ceaser-cipher-textarea textarea {
     width: 450px;
-    height: 400px;
-    font-size: 16px;
+    min-height: 400px;
+    font-size: 1rem;
     margin-bottom: 15px;
     border-radius: 10px;
     border: none;
     box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.5);
-    transition:  0.5s;
-    padding-left: 10px;
-    padding-right: 10px;
+    transition: 0.5s;
+    padding: 15px;
+    resize: vertical;
+    box-sizing: border-box;
 }
 
-textarea:focus {
-    transform: scale(1.05);
+/* Key input */
+.key-input {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 10px;
 }
 
-input#key-input {
-    display: flex;
-    width: 250px;
-    height: 40px;
-    font-size: 16px;
-    padding: 0 25px;
-    margin-bottom: 15px;
-    border-radius: 50px;
+.key-input input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
     border: none;
-    box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.5);
-    transition:  0.5s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    transition: 0.3s;
+    box-sizing: border-box;
 }
 
-input#key-input:focus {
-    transform: scale(1.07);
+.key-input input:focus {
+    outline: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-
+/* Buttons */
 .ceaser-cipher-buttons {
     display: flex;
-    flex-direction: row;
     gap: 10px;
+    width: 100%;
+    justify-content: center;
+    padding: 0 10px;
 }
 
-button {
+.ceaser-cipher-buttons button {
     background-color: #1231dcf6;
     color: #d8b60c;
-    padding: 14px 20px;
-    margin: 8px 0;
     border: 3px solid #d8b60c;
-    cursor: pointer;
+    padding: 12px 24px;
     border-radius: 50px;
-    transition: 0.5s;
-    width: 150px;
-    height: 40px;
-    margin-left: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    transition: 0.3s;
+    min-width: 120px;
+    box-sizing: border-box;
 }
 
-button:hover {
+.ceaser-cipher-buttons button:hover {
     transform: scale(1.1);
-    cursor: pointer;
     opacity: 0.9;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1400px) {
+    .ceaser-cipher-box {
+        max-width: 800px;
+    }
+    
+    .ceaser-cipher-header {
+        max-width: 500px;
+    }
+    
+    .ceaser-cipher-textarea textarea {
+        min-height: 360px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .ceaser-cipher-box {
+        max-width: 700px;
+    }
+    
+    .ceaser-cipher-header header {
+        font-size: 2rem;
+    }
+    
+    .ceaser-cipher-header p.description {
+        font-size: 0.95rem;
+    }
+    
+    .ceaser-cipher-buttons button {
+        padding: 10px 20px;
+    }
+    
+    .ceaser-cipher-textarea textarea {
+        width: 400px;
+        min-height: 320px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .ceaser-cipher-box {
+        max-width: 600px;
+    }
+    
+    .ceaser-cipher-header header {
+        font-size: 1.8rem;
+    }
+    
+    .ceaser-cipher-header p.description {
+        font-size: 0.9rem;
+    }
+    
+    .ceaser-cipher-buttons {
+        gap: 5px;
+    }
+    
+    .ceaser-cipher-buttons button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+    
+    .ceaser-cipher-textarea textarea {
+        width: 350px;
+        min-height: 280px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ceaser-cipher-box {
+        max-width: 500px;
+        padding: 15px;
+    }
+    
+    .ceaser-cipher-header header {
+        font-size: 1.5rem;
+    }
+    
+    .ceaser-cipher-header p.description {
+        font-size: 0.85rem;
+    }
+    
+    .ceaser-cipher-buttons {
+        gap: 3px;
+        flex-wrap: wrap;
+    }
+    
+    .ceaser-cipher-buttons button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        min-width: 100px;
+    }
+    
+    .ceaser-cipher-textarea {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .ceaser-cipher-textarea textarea {
+        width: 100%;
+        min-height: 240px;
+    }
+    
+    .key-input input {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .ceaser-cipher-box {
+        max-width: 100%;
+        padding: 10px;
+    }
+    
+    .ceaser-cipher-header {
+        margin: 20px 0 30px;
+    }
+    
+    .ceaser-cipher-header header {
+        font-size: 1.2rem;
+    }
+    
+    .ceaser-cipher-header p.description {
+        font-size: 0.8rem;
+        margin-top: 8px;
+    }
+    
+    .ceaser-cipher-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .ceaser-cipher-buttons button {
+        width: 100%;
+        min-width: auto;
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .ceaser-cipher-textarea textarea {
+        min-height: 200px;
+        font-size: 0.9rem;
+    }
+    
+    .key-input input {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .ceaser-cipher-box {
+        padding: 8px;
+    }
+    
+    .ceaser-cipher-header header {
+        font-size: 1.1rem;
+    }
+    
+    .ceaser-cipher-header p.description {
+        font-size: 0.75rem;
+        line-height: 1.4;
+    }
+    
+    .ceaser-cipher-buttons {
+        gap: 8px;
+    }
+    
+    .ceaser-cipher-buttons button {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .ceaser-cipher-textarea textarea {
+        min-height: 160px;
+        font-size: 0.85rem;
+    }
+    
+    .key-input input {
+        padding: 6px;
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .ceaser-cipher-box {
+        padding: 5px;
+    }
+    
+    .ceaser-cipher-header header {
+        font-size: 1rem;
+    }
+    
+    .ceaser-cipher-header p.description {
+        font-size: 0.7rem;
+        margin-top: 6px;
+    }
+    
+    .ceaser-cipher-buttons button {
+        padding: 4px 8px;
+        font-size: 0.8rem;
+    }
+    
+    .ceaser-cipher-textarea textarea {
+        min-height: 120px;
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+    
+    .key-input input {
+        padding: 4px;
+        font-size: 0.8rem;
+    }
 
 }
