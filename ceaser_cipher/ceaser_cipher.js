@@ -16,6 +16,8 @@ let plainText
 let encryptedText
 let key
 
+
+
 function shiftCipher(cipherSet, key) 
 /*
 *  Shifts the elements of the given array (cipherSet) to the left by 'key' positions.
