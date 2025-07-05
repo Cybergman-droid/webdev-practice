@@ -16,6 +16,37 @@ let plainText
 let encryptedText
 let key
 
+function validateInputs(input, key)
+{
+    let presence = true;
+    let range = true;
+    let type = true;
+
+    if (input === ''|| key === '')
+    {
+        alert('Please fill in all fields');
+        presence = false;
+    }
+
+    key = Number(key);
+    if (key < 0 || key > 97 )
+    {
+        alert('Key must be between 0 and 96');
+        range= false;
+    }
+    if (Number.isInteger(key) === false)
+    {
+        alert('Key must be an integer');
+        type = false;
+    }
+
+    if (presence === true && range === true && type === true)
+    {
+        return true;
+    }
+    return false;
+}
+
 
 
 function shiftCipher(cipherSet, key) 
@@ -97,9 +128,13 @@ function encryptButtonClick()
 {
     plainText = document.getElementById('input').value;
     key = document.getElementById('key-input').value;
-    cipherSet = shiftCipher(charSet, key);
-    encryptedText = encrypt(plainText, cipherSet, charSet);
-    document.getElementById('output').value = encryptedText;
+    data = validateInputs(plainText, key);
+    if (data == true)
+    {
+        cipherSet = shiftCipher(charSet, key);
+        encryptedText = encrypt(plainText, cipherSet, charSet);
+        document.getElementById('output').value = encryptedText;
+    }
 }
 
 function decryptButtonClick() 
@@ -118,9 +153,13 @@ function decryptButtonClick()
 {
     encryptedText = document.getElementById('input').value;
     key = document.getElementById('key-input').value;
-    cipherSet = shiftCipher(charSet, key);
-    plainText = decrypt(encryptedText, cipherSet, charSet);
-    document.getElementById('output').value = plainText;
+    data = validateInputs(encryptedText, key);
+    if (data == true)
+    {
+        cipherSet = shiftCipher(charSet, key);
+        plainText = decrypt(encryptedText, cipherSet, charSet);
+        document.getElementById('output').value = plainText;
+    }
 }
 
 
