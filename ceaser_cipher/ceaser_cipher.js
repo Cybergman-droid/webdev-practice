@@ -126,12 +126,3 @@ encryptButton.addEventListener('click', encryptButtonClick);
 decryptButton.addEventListener('click', decryptButtonClick)
 
 
-plainText = 'Hello World!';
-cipherSet = shiftCipher(charSet, 13);
-encryptedText = encrypt(plainText, cipherSet, charSet);
-decryptedText = decrypt(encryptedText, cipherSet, charSet);
-
-console.log(charSet);
-console.log(shiftCipher(charSet, 13));
-console.log(encryptedText);
-console.log(decryptedText);
