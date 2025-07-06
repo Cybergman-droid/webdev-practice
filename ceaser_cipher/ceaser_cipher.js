@@ -139,7 +139,7 @@ function encryptButtonClick()
 
 function decryptButtonClick() 
 /**
- * Decrypts the input text using the Caesar cipher method.
+ * Decrypts the input text using the Caesar cipher method.dsd 1
  *
  * @param {string} encryptedText - The string to be decrypted.
  * @param {Array} cipherSet - The array used to perform the decryption.
