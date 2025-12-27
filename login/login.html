@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <link rel="stylesheet" href="login.css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css"/>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body>
     <nav class="navigation-header">
@@ -12,42 +15,17 @@
         <button class="nav-button">Home</button>
       </a>
     </nav>
-    <div class="login-box">
-      <div class="login-header">
-        <header>Login</header>
-      </div>
-      <div class="input-box">
-        <input
-          type="text"
-          class="input-field"
-          placeholder="Username"
-          id="username"
-          required
-        />
-        <input
-          type="password"
-          class="input-field"
-          placeholder="Password"
-          id="password"
-          required
-        />
-        <div class="forgot">
-          <section>
-            <input type="checkbox" id="check" />
-            <label for="check">Remember me</label>
-          </section>
-          <a href="#">Forgot password?</a>
-        </div>
-        <div class="input-submit">
-          <button id="login-btn" type="submit" class="submit-btn">
-            <label for="login-btn">Login</label>
-          </button>
-        </div>
-        <div class="sign-up-link">
-          <p>Don't have an account? <a href="#">Sign up</a></p>
-        </div>
-      </div>
-    </div>
+    <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+      <legend class="fieldset-legend">Login</legend>
+
+      <label class="label">Email</label>
+      <input type="email" class="input" placeholder="Email" />
+
+      <label class="label">Password</label>
+      <input type="password" class="input" placeholder="Password" />
+
+      <button class="btn btn-neutral mt-4">Login</button>
+    </fieldset>
     <script src="login.js"></script>
   </body>
 </html>
