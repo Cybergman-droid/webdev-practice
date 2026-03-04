@@ -50,11 +50,13 @@ app.get("/users/:id/name", (req, res) => {
 });
 
 app.get("/users/new", (req, res) => {
-  res.send("User New Form");
+  console.log(req.body);
+  res.send(200);
 });
 
 app.post("/users/newUser", (req, res) => {
-  res.send("Create User");
+  console.log(req.body);
+  res.send(200);
 });
 
 //this shows us the port the server is supposed to listen on
